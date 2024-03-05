@@ -13,14 +13,6 @@ const UpcomingMovies = () => {
 
   return (
     <div className='upcomingmovie_container'>
-      <div className='search'>
-      <input
-        type="text"
-        placeholder="Buscar películas..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
-      </div>
       <h1>Próximas Películas</h1>
       {upComingMovie.map((movie) =>( 
         <li key={movie.id}>
