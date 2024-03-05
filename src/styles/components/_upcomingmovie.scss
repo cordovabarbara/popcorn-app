@@ -1,10 +1,13 @@
 .upcomingmovie_container{
     background-color: grey;
 
-    img{
-        width: 400px;
-    }
     h2{
         color: red;
     }
+}
+
+.carousel__image{
+    width: 500px;
+     height: auto;  // Esto asegura que la altura se ajuste automáticamente para mantener la proporción original de la imagen
+    background-size: cover;
 }

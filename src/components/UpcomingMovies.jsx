@@ -1,7 +1,7 @@
-
 import { useEffect, useState } from 'react';
 import useFetch from '../hooks/useFetch';
-import '../styles/styles.scss'
+import Slider from '../components/Slider';
+import '../styles/styles.scss';
 
 const UpcomingMovies = () => {
   const { upComingMovie, getMovies } = useFetch();
@@ -9,21 +9,14 @@ const UpcomingMovies = () => {
 
   useEffect(() => {
     getMovies(searchTerm);
-  }, [setSearchTerm]); // 
+  }, [setSearchTerm]);  // Corregido
 
   return (
     <div className='upcomingmovie_container'>
       <h1>Próximas Películas</h1>
-      {upComingMovie.map((movie) =>( 
-        <li key={movie.id}>
-          <h2>{movie.title}</h2>
-          <img
-          src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-          alt={movie.title}>
-          </img>
-          <p>{movie.overview}</p>
-        </li>
-      ))}
+        <div className='carousel__image'>
+          <Slider movies={upComingMovie} />
+      </div>
     </div>
   );
 };
