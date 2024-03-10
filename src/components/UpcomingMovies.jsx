@@ -14,9 +14,9 @@ const UpcomingMovies = () => {
   return (
     <div className='upcomingmovie_container'>
       <h1>Próximas Películas</h1>
-        <div className='carousel__image'>
+          <div className='carousel__image'>
           <Slider movies={upComingMovie} />
-      </div>
+          </div>
     </div>
   );
 };
