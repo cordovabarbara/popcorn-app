@@ -1,4 +1,4 @@
-import UpcomingMovies from "./components/UpcomingMovies"
+import Movies from './components/Movies'
 import Navbar from './shared/Navbar'
 
 
@@ -8,7 +8,7 @@ function App() {
     
       <div>
         <Navbar/>
-        <UpcomingMovies/>
+        <Movies/>
 
       </div>
   )

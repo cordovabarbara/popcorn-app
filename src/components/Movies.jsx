@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import useFetch from '../hooks/useFetch';
-import Slider from '../components/Slider';
-import '../styles/styles.scss';
+import Slider from './Slider';
+import '../styles/styles.scss'
 
-const UpcomingMovies = () => {
-  const { upComingMovie, getMovies } = useFetch();
+const Movies = () => {
+  const {Movie, getMovies} = useFetch();
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
@@ -12,13 +12,13 @@ const UpcomingMovies = () => {
   }, [setSearchTerm]);  // Corregido
 
   return (
-    <div className='upcomingmovie_container'>
-      <h1>Próximas Películas</h1>
+    <div className='movie_container'>
+      <h1>Lo Actual</h1>
           <div className='carousel__image'>
-          <Slider movies={upComingMovie} />
+          <Slider movies={Movie} />
           </div>
     </div>
   );
 };
 
-export default UpcomingMovies;
+export default Movies;

@@ -4,20 +4,20 @@ import axios from "axios";
 const useFetch = () => {
 
     // VARIABLES DE ESTADO
-const [upComingMovie, setUpComingMovie] = useState([])
+const [Movie, setMovie] = useState([])
 const [hasError, setHasError] = useState(false)
 
-const urlUpcoming = 'https://api.themoviedb.org/3/movie/upcoming';
+const API_URL = 'https://api.themoviedb.org/3';
 const API_KEY ='9acc36a0b8d6390b09f1c8d0109bce32';
 
 const getMovies = (searchTerm = "") => {
-    axios.get(urlUpcoming, {
+    axios.get(`${API_URL}/movie/popular`, {
         params: {
             api_key: API_KEY,
             query: searchTerm,
         },})
         .then(res => {
-            setUpComingMovie(res.data.results);
+            setMovie(res.data.results);
             console.log(res.data.results);
             setHasError(false);
         })
@@ -28,7 +28,7 @@ const getMovies = (searchTerm = "") => {
 }
 
 return {
-    upComingMovie,
+    Movie,
     hasError,
     getMovies
 }

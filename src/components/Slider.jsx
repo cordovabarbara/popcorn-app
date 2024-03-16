@@ -1,4 +1,3 @@
-
 const Slider = ({ movies }) => {
   return (
     <div>
@@ -10,7 +9,7 @@ const Slider = ({ movies }) => {
         </div>
         <div className="carousel-inner">
           {movies.map((movie, index) => (
-            <div key={movie.id} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
+            <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
               <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} className="d-block w-100" alt={`Slide ${index + 1}`} />
               <h2>{movie.title}</h2>
               <p>{movie.overview}</p>
