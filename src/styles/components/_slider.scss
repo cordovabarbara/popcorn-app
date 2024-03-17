@@ -1,0 +1,18 @@
+.carousel-inner h2{
+    position: absolute;
+    color: white;
+    top: 10px;
+    left: 10px ;
+}
+.carousel__info {
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(30px);
+    width: 500px;
+    height:fit-content;
+    position: absolute;
+    bottom: 60px;
+    left: 10px;
+    color: white;
+    justify-content: center;
+} 
