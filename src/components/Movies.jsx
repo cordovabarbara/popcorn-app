@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import useFetch from '../hooks/useFetch';
 import Slider from './Slider';
 import '../styles/styles.scss'
+import UpcomingMovies from './UpcomingMovies';
 
 const Movies = () => {
   const {Movie, getMovies} = useFetch();
@@ -18,6 +19,7 @@ const Movies = () => {
           <Slider movies={Movie} />
           </div>
     </div>
+
   );
 };
 
