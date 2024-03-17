@@ -9,12 +9,14 @@
 .carousel__image {
     height: 700px;
     width: 100%;
-    background-color: aqua;
+   
 }
 
 img {
     max-width: 1000px;
     max-height: 600px;
+    opacity: 80%;
+
 }
 
 @media (min-width: 768px) {
